@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
-import { useCourseContext } from '../contexts/CourseContext';
 
 const CourseCard = ({ course }) => {
   return (
@@ -47,11 +46,110 @@ const CourseCard = ({ course }) => {
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Semua Kelas');
   const [email, setEmail] = useState('');
-  const { courses } = useCourseContext();
-  
-  console.log('HomePage courses:', courses);
   
   const categories = ['Semua Kelas', 'Pemasaran', 'Desain', 'Pengembangan Diri', 'Bisnis'];
+  
+  const courses = [
+    {
+      id: 1,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 3.5,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 2,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 3.0,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 3,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 4.0,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 4,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 3.5,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 5,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 4.5,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 6,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 3.0,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 7,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 4.0,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 8,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 3.5,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    },
+    {
+      id: 9,
+      title: 'Big 4 Auditor Financial Analyst',
+      description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
+      instructor: 'Jenna Ortega',
+      instructorTitle: 'Senior Accountant di Gojek',
+      rating: 5.0,
+      price: 'Rp 300K',
+      image: 'https://www.techpowerup.com/img/VQi1cGazK7dn43SO.jpg',
+      instructorImage: 'https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png'
+    }
+  ];
   
   
   const handleSubscribe = (e) => {
